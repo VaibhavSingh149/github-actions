@@ -1,0 +1,23 @@
+# 1. Name: A human-readable name for the workflow, shown in the Actions UI.
+name: A Basic Workflow
+
+# 2. On (Event): The trigger. Defines WHEN this workflow should run.
+on: push
+
+# 3. Jobs: A container for one or more jobs. By default, jobs run in parallel.
+jobs:
+  # 4. Job ID: A unique, machine-friendly ID for the job (e.g., 'build', 'test').
+  first-job:
+    # 5. Runner: The virtual server environment to run the job on.
+    runs-on: ubuntu-latest
+
+    # 6. Steps: A sequence of tasks to be executed within this job.
+    steps:
+      # 7. A single step. 'name' provides a clear description in the logs.
+      - name: Greet the world
+        # 8. 'run' executes shell commands on the runner.
+        run: echo "Hello from our first job!"
+
+      # 9. 'uses' executes a pre-built 'Action'. This is the key to reusable automation.
+      - name: Checkout repository code
+        uses: actions/checkout@v4
