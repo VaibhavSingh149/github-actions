@@ -5,8 +5,13 @@ on:
   push:
     branches: [ "main" ]
 
+# env:
+#   IMAGE_NAME: ghcr.io/${{ github.repository }}
+
+# tried hardcoding the image name, as the upper line was not working due to uppercase issues
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  IMAGE_NAME: ghcr.io/vaibhavsingh149/github-actions
+
 
 jobs:
   build-and-push:
