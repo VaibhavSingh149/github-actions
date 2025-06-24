@@ -142,3 +142,11 @@ npm install express
 
 - Now the page was available on my public ip successfully
 ![alt text](image-5.png)
+
+
+
+### LINK TO MY k8s
+files were not combining so I had to publish a new repository
+```bash
+https://github.com/VaibhavSingh149/k8s
+```
